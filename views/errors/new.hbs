@@ -1,0 +1,69 @@
+
+<div class="page-header">
+    <h1>Új tárgy felvétele</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group
+            {{#if validationErrors.nev}}
+                has-error
+            {{/if}}
+        ">
+            <label for="nev" class="col-lg-2 control-label">Tárgy neve</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="nev" name="nev" placeholder="pl. Analízis 1, Alkalmazások fejlesztése..." type="text" value="{{data.nev}}">
+                {{#if validationErrors.nev}}
+                    <span class="help-block">{{validationErrors.nev.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.kod}}
+                has-error
+            {{/if}}
+        ">
+            <label for="kod" class="col-lg-2 control-label">Tárgy kódja</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="kod" name="kod" placeholder="pl. IP-08cAB2E, IP-08CALKG..." type="text" value="{{data.kod}}">
+                {{#if validationErrors.kod}}
+                    <span class="help-block">{{validationErrors.kod.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.kredit}}
+                has-error
+            {{/if}}
+        ">
+            <label for="kredit" class="col-lg-2 control-label">Kredit</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="kredit" name="kredit" placeholder="pl. 2, 3, 5..." type="text" value="{{data.kredit}}">
+                {{#if validationErrors.kredit}}
+                    <span class="help-block">{{validationErrors.kredit.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.leiras}}
+                has-error
+            {{/if}}
+        ">
+            <label for="leiras" class="col-lg-2 control-label">Leírás</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
+                <span class="help-block">Meg kell adni a tárgy nevét, kódját és kreditértékét, valamint a leírás mezőben a helyszínt és az időpontot (a leírás nem kötelező).</span>
+                {{#if validationErrors.leiras}}
+                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
