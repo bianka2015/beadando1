@@ -89,11 +89,38 @@ Lista
 
 ### 2.3. Osztálymodell
 #### 2.3.1. Adatmodell
+![Adatmodell](docs/images/adatmodell.png)
 
 #### 2.3.2. Adatbázisterv
+![Adatbázisterv](docs/images/adatbazisterv.png)
+
+#####Táblák
+Felhasznalo
+Leírás: A felhasználó adatai ebben a táblában kerülnek tárolásra.
+Attribútumok:
+    - id (egész): felhasználó azonosítója az adatbázisban
+    - vezeteknev (szöveg(30)): felhasználó vezetékneve
+    - keresztnev (szöveg(30)): felhasználó keresztneve
+    - neptunkod (szöveg(6)): felhasználó neptunkódja
+    - jelszo (szöveg(20)): a felhasználó jelszava (kódolt)
+    
+Tantargy
+Leírás: A tantárgy adatai ebben a táblában kerülnek tárolásra.
+Attribútumok:
+    - id (egész): tantárgy azonosítója az adatbázisban
+    - felhasznalo: melyik felhasználó vette fel a tárgyat
+    - nev (szöveg(30)): tantárgy neve
+    - kod (szöveg(30)): tantárgy kódja
+    - kredit (egész): tantárgy kreditértéke
+    - leiras (szöveg(60)): a tantárgy részletesebb leírása
+Kapcsolatok: TantargyToFelhasznalo
+
 #### 2.3.3. Állapotdiagram
+![Állapotdiagram](docs/images/allapotdiagram.png)
 
 ### 2.4. Dinamikus működés
+#### 2.4.1. Szekvenciadiagram
+![Szekvenciadiagram](docs/images/szekvenciadiagram.png)
 
 ## 3. Implementáció
 
