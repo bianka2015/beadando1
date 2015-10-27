@@ -124,7 +124,27 @@ Kapcsolatok: TantargyToFelhasznalo
 
 ## 3. Implementáció
 
+### 3.1. Fejlesztői környezet bemutatása
+Nodejs fejlesztői környezetben szerves oldali javascript-el lett megírva a program.
+
+### 3.2. Könyvtárstruktúrában lévő mappák funkiójának bemutatása
+A controllers mappában található file-ok végzik a végpontok kezelését, az oldalak megjelenítését és az adatok kezelését.
+A docs/images mappában vannak a dokumentációhoz szükséges képek és ábrák.
+A models mappa tárolja a tantárgyakat és a felhasználókat reprezentáló adatszerkezetek struktúráját.
+A views mappa az oldalak kinézetét leíró file-okat tartalmazza.
+
 ## 4. Tesztelés
+
+### 4.1. Tesztelési környezet bemutatása
+Mocha teszt keretrendszert és chai ellenőrző könyvtárat használok. A tesztfile-ok nevei <valami>.test.js vagy <valami>.spec.js. A teszteket a következő módon lehet futtatni: mocha **/*.test.js.
+
+### 4.2. Egységtesztek (1 adatmodell tesztelése)
+Felhasználó adatmodell tesztelése.
+A tesztfile a models mappában található user.test.js néven. Létrehoz egy új felhasználót, majd megpróbálja megkeresni, ezután pedig ellenőrzi, hogy
+ha megkeresi a felhasználót, akkor megfelelő jelszó tartozik-e hozzá. 
+
+### 4.3. Funkcionális felületi tesztek (1 folyamat tesztelése)
+### 4.4. Tesztesetek felsorolása
 
 ## 5. Felhasználói dokumentáció
 
