@@ -23,6 +23,13 @@ router.get('/signup', function (req, res) {
     });
 });
 
+
+router.get('/login', function (req, res) {
+    res.render('login/index', {
+        errorMessages: req.flash('error')
+    });
+});
+
 router.post('/signup', passport.authenticate('local-signup', {
     successRedirect:    '/login',
     failureRedirect:    '/login/signup',

@@ -28,11 +28,10 @@ describe('UserModel', function () {
 
     function getUserData() {
         return {
-            neptun: 'abcdef',
-            password: 'jelszo',
-            surname: 'Gipsz',
-            forename: 'Jakab',
-            avatar: '',
+            neptun: 'abc123',
+            password: 'abcdefgh',
+            surname: 'Proba',
+            forename: 'Felhasznalo',
         };
     }
 
@@ -44,18 +43,16 @@ describe('UserModel', function () {
     
     it('should be able to create a user', function () {
         return User.create({
-                neptun: 'abcdef',
-                password: 'jelszo',
-                surname: 'Gipsz',
-                forename: 'Jakab',
-                avatar: '',
+            neptun: 'abc123',
+            password: 'abcdefgh',
+            surname: 'Proba',
+            forename: 'Felhasznalo',
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
-            expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
-            expect(user.surname).to.equal('Gipsz');
-            expect(user.forename).to.equal('Jakab');
-            expect(user.avatar).to.equal('');
+            expect(user.neptun).to.equal('abc123');
+            expect(bcrypt.compareSync('abcdefgh', user.password)).to.be.true;
+            expect(user.surname).to.equal('Proba');
+            expect(user.forename).to.equal('Felhasznalo');
         });
     });
 
@@ -65,18 +62,17 @@ describe('UserModel', function () {
             return User.findOneByNeptun(user.neptun);
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
-            expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
-            expect(user.surname).to.equal('Gipsz');
-            expect(user.forename).to.equal('Jakab');
-            expect(user.avatar).to.equal('');
+            expect(user.neptun).to.equal('abc123');
+            expect(bcrypt.compareSync('abcdefgh', user.password)).to.be.true;
+            expect(user.surname).to.equal('Proba');
+            expect(user.forename).to.equal('Felhasznalo');
         });
     });
 
     describe('#validPassword', function() {
         it('should return true with right password', function() {
              return User.create(getUserData()).then(function(user) {
-                 expect(user.validPassword('jelszo')).to.be.true;
+                 expect(user.validPassword('abcdefgh')).to.be.true;
              })
         });
         it('should return false with wrong password', function() {
