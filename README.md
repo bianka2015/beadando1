@@ -31,7 +31,69 @@ Bejelentkezett felhasználó: Felvehet új tantárgyat, a listázási és szerke
 #### 1.3.3. Folyamatok pontos menete
 ![Új tárgy felvétele](docs/images/ujtargyfolyamat.png)
 
+Cím: Új tárgy felvétele
+Cél: Új tantárgy felvétele.
+Előfeltétel: Csak belépett felhasználó tud új tantrágyat fölvenni.
+Utófeltétel: A tárgy mentése sikeres.
+
+Folyamat leírása:
+Az alábbi lépések végrehajtása szükséges:
+- Az alábbi adatokat kell a felhasználónak kötelezően megadnia egy új bemutató készítésekor: név, kód, kredit.
+- Opcionális adatok: leírás
+- Tantárgy mentése
+
 ## 2. Tervezés
+
+### 2.1. Architektúra terv
+#### 2.1.1. Komponensdiagram
+
+#### 2.1.2. Oldaltérkép
+Publikus:
+- Főoldal
+- Login
+- Registráció
+
+Csak bejelentkezettek látják:
+- Tárgyak listája
+    - új tárgy
+    - tárgy szerkesztése
+    - tárgy törlése
+
+#### 2.1.3. Végpontok
+GET /: főoldal
+GET /login: bejelentkező oldal
+GET /signup: regisztráló oldal
+POST /login: bejelentkezési adatok elküldése
+POST /signup: regisztrációs adatok elküldése
+GET /errors/list: saját tárgylista oldal
+GET /errors/new: új tárgy felvitele
+POST /errors/new: új tárgy felvitele, adatok küldése
+GET /errors/edit: tárgy szerkesztése
+POST /errors/edit: tárgy szerkesztése, adatok küldése
+
+### 2.2. Felhasználóifelület-modell
+Főoldal
+![Használati diagram](docs/images/fooldal.png)
+
+Login
+![Használati diagram](docs/images/login.png)
+
+Regisztráció
+![Használati diagram](docs/images/regisztració.png)
+
+Lista 
+![Használati diagram](docs/images/lista.png)
+
+Új tárgy felvétele, tárgy szerkesztese
+![Használati diagram](docs/images/ujtargy.png)
+
+### 2.3. Osztálymodell
+#### 2.3.1. Adatmodell
+
+#### 2.3.2. Adatbázisterv
+#### 2.3.3. Állapotdiagram
+
+### 2.4. Dinamikus működés
 
 ## 3. Implementáció
 
