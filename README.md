@@ -26,11 +26,10 @@ Vendég: Az a felhasználó, aki azonosítatlanul használja az alkalmazást. A 
 Bejelentkezett felhasználó: Felvehet új tantárgyat, a listázási és szerkesztési oldalakat is használhatja.
 
 #### 1.3.2. Használati eset diagramok
+![Használati diagram](docs/images/hasznalati_diagram.png)
 
 #### 1.3.3. Folyamatok pontos menete
-
-
-### 1.5. Nem funkcionális követelmények
+![Új tárgy felvétele](docs/images/ujtargyfolyamat.png)
 
 ## 2. Tervezés
 
