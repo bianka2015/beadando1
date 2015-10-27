@@ -31,11 +31,120 @@ Bejelentkezett felhasználó: Felvehet új tantárgyat, a listázási és szerke
 #### 1.3.3. Folyamatok pontos menete
 ![Új tárgy felvétele](docs/images/ujtargyfolyamat.png)
 
+Cím: Új tárgy felvétele
+Cél: Új tantárgy felvétele.
+Előfeltétel: Csak belépett felhasználó tud új tantrágyat fölvenni.
+Utófeltétel: A tárgy mentése sikeres.
+
+Folyamat leírása:
+Az alábbi lépések végrehajtása szükséges:
+- Az alábbi adatokat kell a felhasználónak kötelezően megadnia egy új bemutató készítésekor: név, kód, kredit.
+- Opcionális adatok: leírás
+- Tantárgy mentése
+
 ## 2. Tervezés
+
+### 2.1. Architektúra terv
+#### 2.1.1. Komponensdiagram
+
+#### 2.1.2. Oldaltérkép
+Publikus:
+- Főoldal
+- Login
+- Registráció
+
+Csak bejelentkezettek látják:
+- Tárgyak listája
+    - új tárgy
+    - tárgy szerkesztése
+    - tárgy törlése
+
+#### 2.1.3. Végpontok
+GET /: főoldal
+GET /login: bejelentkező oldal
+GET /signup: regisztráló oldal
+POST /login: bejelentkezési adatok elküldése
+POST /signup: regisztrációs adatok elküldése
+GET /errors/list: saját tárgylista oldal
+GET /errors/new: új tárgy felvitele
+POST /errors/new: új tárgy felvitele, adatok küldése
+GET /errors/edit: tárgy szerkesztése
+POST /errors/edit: tárgy szerkesztése, adatok küldése
+
+### 2.2. Felhasználóifelület-modell
+Főoldal
+![Használati diagram](docs/images/fooldal.png)
+
+Login
+![Használati diagram](docs/images/login.png)
+
+Regisztráció
+![Használati diagram](docs/images/regisztració.png)
+
+Lista 
+![Használati diagram](docs/images/lista.png)
+
+Új tárgy felvétele, tárgy szerkesztese
+![Használati diagram](docs/images/ujtargy.png)
+
+### 2.3. Osztálymodell
+#### 2.3.1. Adatmodell
+![Adatmodell](docs/images/adatmodell.png)
+
+#### 2.3.2. Adatbázisterv
+![Adatbázisterv](docs/images/adatbazisterv.png)
+
+#####Táblák
+Felhasznalo
+Leírás: A felhasználó adatai ebben a táblában kerülnek tárolásra.
+Attribútumok:
+    - id (egész): felhasználó azonosítója az adatbázisban
+    - vezeteknev (szöveg(30)): felhasználó vezetékneve
+    - keresztnev (szöveg(30)): felhasználó keresztneve
+    - neptunkod (szöveg(6)): felhasználó neptunkódja
+    - jelszo (szöveg(20)): a felhasználó jelszava (kódolt)
+    
+Tantargy
+Leírás: A tantárgy adatai ebben a táblában kerülnek tárolásra.
+Attribútumok:
+    - id (egész): tantárgy azonosítója az adatbázisban
+    - felhasznalo: melyik felhasználó vette fel a tárgyat
+    - nev (szöveg(30)): tantárgy neve
+    - kod (szöveg(30)): tantárgy kódja
+    - kredit (egész): tantárgy kreditértéke
+    - leiras (szöveg(60)): a tantárgy részletesebb leírása
+Kapcsolatok: TantargyToFelhasznalo
+
+#### 2.3.3. Állapotdiagram
+![Állapotdiagram](docs/images/allapotdiagram.png)
+
+### 2.4. Dinamikus működés
+#### 2.4.1. Szekvenciadiagram
+![Szekvenciadiagram](docs/images/szekvenciadiagram.png)
 
 ## 3. Implementáció
 
+### 3.1. Fejlesztői környezet bemutatása
+Nodejs fejlesztői környezetben szerves oldali javascript-el lett megírva a program.
+
+### 3.2. Könyvtárstruktúrában lévő mappák funkiójának bemutatása
+A controllers mappában található file-ok végzik a végpontok kezelését, az oldalak megjelenítését és az adatok kezelését.
+A docs/images mappában vannak a dokumentációhoz szükséges képek és ábrák.
+A models mappa tárolja a tantárgyakat és a felhasználókat reprezentáló adatszerkezetek struktúráját.
+A views mappa az oldalak kinézetét leíró file-okat tartalmazza.
+
 ## 4. Tesztelés
+
+### 4.1. Tesztelési környezet bemutatása
+Mocha teszt keretrendszert és chai ellenőrző könyvtárat használok. A tesztfile-ok nevei <valami>.test.js vagy <valami>.spec.js. A teszteket a következő módon lehet futtatni: mocha **/*.test.js.
+
+### 4.2. Egységtesztek (1 adatmodell tesztelése)
+Felhasználó adatmodell tesztelése.
+A tesztfile a models mappában található user.test.js néven. Létrehoz egy új felhasználót, majd megpróbálja megkeresni, ezután pedig ellenőrzi, hogy
+ha megkeresi a felhasználót, akkor megfelelő jelszó tartozik-e hozzá. 
+
+### 4.3. Funkcionális felületi tesztek (1 folyamat tesztelése)
+### 4.4. Tesztesetek felsorolása
 
 ## 5. Felhasználói dokumentáció
 
