@@ -1,4 +1,4 @@
-
+/*
 
 
 //Viewmodel réteg
@@ -16,11 +16,11 @@ var statusClasses = {
     'rejected': 'default',
     'pending': 'warning',
 };
-
+*/
 function decorateErrors(errorContainer) {
     return errorContainer.map(function (e) {
-        e.statusText = statusTexts[e.status];
-        e.statusClass = statusClasses[e.status];
+        //e.statusText = statusTexts[e.status];
+        //e.statusClass = statusClasses[e.status];
         return e;
     });
 }

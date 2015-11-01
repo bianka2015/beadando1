@@ -6,37 +6,24 @@ var router = express.Router();
 var decorateErrors = require('../viewmodels/error');
 var id = 1;
 
-// route middleware that will happen on every request
-router.use(function(req, res, next) {
-
-    // log each request to the console
-    console.log("===================");
-    console.log("Generic route: ");
-    console.log(req.method, req.url);
-    console.log("===================");
-
-    // continue doing what we were doing and go to the route
-    next(); 
-});
 
 // Hibalista oldal
 router.get('/list', function (req, res) {
     // user.forename
-    console.log("controllers/list");
     var neptun = req.user.neptun;
     console.log(neptun);
     var i = req.query.id;
-    console.log('URL param: id: ' + req.query.id);
-    console.log("i: ");
-    console.log(i);
+    //console.log('URL param: id: ' + req.query.id);
+    //console.log("i: ");
+    //console.log(i);
     if (i != undefined) {
-        console.log("if i != undefined");
+        //console.log("if i != undefined");
         req.app.models.error.destroy({id: i}).exec(function(err, errors) {
             if (err) {
                 console.log("hiba");
             }
-            console.log(i);
-            console.log("nincs hiba");
+            //console.log(i);
+            //console.log("nincs hiba");
         });
     }
     
@@ -109,7 +96,7 @@ router.get('/new', function(req, res) {
         validationErrors: validationErrors,
         data: data,
     });
-})
+});
 
 router.get('/edit', function(req, res) {
     /*console.log('hello cica');
@@ -123,9 +110,9 @@ router.get('/edit', function(req, res) {
     });
     */
     var i = req.query.id;
-    console.log('URL param: id: ' + req.query.id);
-    console.log("get i:");
-    console.log(i);
+    //console.log('URL param: id: ' + req.query.id);
+    //console.log("get i:");
+    //console.log(i);
     req.app.models.error.find().then(function (errors) {
         var er = decorateErrors(errors);
         for(var key in er)
@@ -139,7 +126,7 @@ router.get('/edit', function(req, res) {
             messages: req.flash('info')
         });
     });
-})
+});
 
 // Hiba felvitele POST
 router.post('/new', function(req, res) {
@@ -178,7 +165,7 @@ router.post('/new', function(req, res) {
         })
         .catch(function (err) {
             //hiba
-            console.log(err)
+            console.log(err);
         });
         //req.app.models.error.find().then(function (errors) {
         //res.render('errors/list');
@@ -195,7 +182,7 @@ router.post('/edit', function(req, res) {
     //req.sanitizeBody('leiras').escape();
     //req.checkBody('leiras', 'Hibás leírás').notEmpty().withMessage('Kötelező megadni!');
     var i = req.query.id;
-    console.log(i);
+    //console.log(i);
     var validationErrors = req.validationErrors(true);
     //console.log(validationErrors);
     
@@ -211,8 +198,8 @@ router.post('/edit', function(req, res) {
             if (err) {
                 console.log("hiba");
             }
-            console.log(i);
-            console.log("nincs hiba");
+            //console.log(i);
+            //console.log("nincs hiba");
         });
         res.redirect('/errors/list');
         /*req.app.models.error.find().then(function (errors) {
