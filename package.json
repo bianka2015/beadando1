@@ -2,7 +2,7 @@
   "scripts": {
     "test": "node_modules/mocha/bin/mocha **/*.test.js",
     "watch-test": "node_modules/mocha/bin/mocha --watch **/*.test.js",
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "devDependencies": {
     "chai": "^3.4.0",
