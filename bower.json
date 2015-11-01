@@ -17,6 +17,7 @@
     "bootstrap-validator": "~0.9.0",
     "handlebars": "~4.0.3",
     "bootstrap": "~3.3.5",
-    "bootswatch": "~3.3.5+4"
+    "bootswatch": "~3.3.5+4",
+    "express":
   }
 }
