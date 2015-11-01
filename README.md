@@ -144,7 +144,23 @@ A tesztfile a models mappában található user.test.js néven. Létrehoz egy ú
 ha megkeresi a felhasználót, akkor megfelelő jelszó tartozik-e hozzá. 
 
 ### 4.3. Funkcionális felületi tesztek (1 folyamat tesztelése)
+A tesztfile a test.js néven található. Először a kezdőoldalra megy, ott ellenőrzi, hogy oda került-e. Majd megpróbálja elérni a tárgyakat listázó oldalt, de mivel még nincs bejelentkezve, ezért visszakerül a bejelentkező oldalra. Ott bejelentkezik egy már regisztrált felhasználóval és a tantárgakat listázó oldalra kerül. Ezután felvesz egy új tantárgyat.
+
 ### 4.4. Tesztesetek felsorolása
+- egységteszt: user.test.js
+- funcionális teszt: test.js
+- tesztesetek nem készültek róla, de ki lett próbálva: 
+        - felhasználó regisztrálása (még nem létező, illetve már létező - utóbbi nem megengedett)
+        - tantárgyak szerkesztése
+        - tantárgyak törlése
+        - kilépés
 
 ## 5. Felhasználói dokumentáció
-
+### 5.1. A program használata
+A kezdőoldalról elérhető a belépés oldal. Ha már van regisztrált felhasználó, azzal ott kell belépni. Ha még nincs, vagy pedig új valami szeretne regisztrálni, az a regisztráció gombra kattintva átkerül a regisztrációs oldalra. Ott meg kell adnia a vezetéknevét, a keresztnevét, a neptun kódot, illetve a jelszót. Mindegyik mező kötelező, de csak a neptun kódnak kell egyedinek lennie.
+Sikeres regisztráció esetén visszakerülünk a bejelentkező oldalra, ahol már bejelentkezhet.
+Sikertelen regisztráció esetén (már létezett az a neptun kód, vagy valamelyik adat nem volt megadva) ottmaradunk a regisztrációs oldalon.
+Bejelentkezés után látjuk azokat a tantárgyakat, amit a felhasználó már létrehozott. Lehetőség van új tantárgy felvételére, meglévő szerkesztésére és törlésére.
+Új tantárgy felvételekor meg kell adni a tárgy nevét, a kódját, a kreditértékét és leírást is lehet adni hozzá. Az első három tulajdonságot kötelező megadni, leírást nem muszáj. Egyik tulajdonság sem egyedi, azaz két tárgyat is föl lehet venni, aminek minden tulajdonsága megegyezik.
+Létező tantárgy szerkesztésekor a szerkeszteni kívánt tantárgy melletti 'Tárgy szerkesztése' gombra kattintva kerülünk a szerkesztés oldalra. Itt már be vannak másolva a mezőkbe a tárgy adatai. Itt lehet őket módosítani, majd a 'Submit' gombbal mentésre kerülnek a változások és visszakerülünk a listázó oldalra.
+Létező tantárgy törléséhez a törölni kívánt tantárgy melletti 'Tárgy törlése' gombra kell kattintani. Ekkor továbbra is ottmaradunk a listázó oldalon, de az a tárgy már nem jelenik meg a listában.
