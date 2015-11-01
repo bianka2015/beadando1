@@ -158,9 +158,15 @@ A tesztfile a test.js néven található. Először a kezdőoldalra megy, ott el
 ## 5. Felhasználói dokumentáció
 ### 5.1. A program használata
 A kezdőoldalról elérhető a belépés oldal. Ha már van regisztrált felhasználó, azzal ott kell belépni. Ha még nincs, vagy pedig új valami szeretne regisztrálni, az a regisztráció gombra kattintva átkerül a regisztrációs oldalra. Ott meg kell adnia a vezetéknevét, a keresztnevét, a neptun kódot, illetve a jelszót. Mindegyik mező kötelező, de csak a neptun kódnak kell egyedinek lennie.
+
 Sikeres regisztráció esetén visszakerülünk a bejelentkező oldalra, ahol már bejelentkezhet.
+
 Sikertelen regisztráció esetén (már létezett az a neptun kód, vagy valamelyik adat nem volt megadva) ottmaradunk a regisztrációs oldalon.
+
 Bejelentkezés után látjuk azokat a tantárgyakat, amit a felhasználó már létrehozott. Lehetőség van új tantárgy felvételére, meglévő szerkesztésére és törlésére.
+
 Új tantárgy felvételekor meg kell adni a tárgy nevét, a kódját, a kreditértékét és leírást is lehet adni hozzá. Az első három tulajdonságot kötelező megadni, leírást nem muszáj. Egyik tulajdonság sem egyedi, azaz két tárgyat is föl lehet venni, aminek minden tulajdonsága megegyezik.
+
 Létező tantárgy szerkesztésekor a szerkeszteni kívánt tantárgy melletti 'Tárgy szerkesztése' gombra kattintva kerülünk a szerkesztés oldalra. Itt már be vannak másolva a mezőkbe a tárgy adatai. Itt lehet őket módosítani, majd a 'Submit' gombbal mentésre kerülnek a változások és visszakerülünk a listázó oldalra.
+
 Létező tantárgy törléséhez a törölni kívánt tantárgy melletti 'Tárgy törlése' gombra kell kattintani. Ekkor továbbra is ottmaradunk a listázó oldalon, de az a tárgy már nem jelenik meg a listában.
