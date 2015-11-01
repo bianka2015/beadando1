@@ -1,10 +1,10 @@
 {
-  "name": "hibabejelento",
+  "name": "targyfelvetel",
   "version": "0.0.0",
   "authors": [
-    "eltezalan <kereszti.zalan@gmail.com>"
+    "bekefi bianka"
   ],
-  "description": "Hibabejelento alkalmazas",
+  "description": "Targyfelvevo alkalmazas",
   "license": "MIT",
   "ignore": [
     "**/.*",
