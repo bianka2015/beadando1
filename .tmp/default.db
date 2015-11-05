@@ -16,13 +16,13 @@
       {
         "status": "new",
         "nev": "targy1",
-        "kod": "abcd01",
+        "kod": "abcd01111",
         "kredit": "2",
         "leiras": "valami",
         "i": "1",
         "user": 15,
         "createdAt": "2015-11-01T13:56:58.450Z",
-        "updatedAt": "2015-11-01T13:56:58.450Z",
+        "updatedAt": "2015-11-05T10:46:48.764Z",
         "id": 3
       },
       {
@@ -39,15 +39,15 @@
       },
       {
         "status": "new",
-        "nev": "aaaa",
-        "kod": "sgrt",
-        "kredit": "1",
-        "leiras": "",
+        "nev": "ghfh",
+        "kod": "fghfgh",
+        "kredit": "fghfgh",
+        "leiras": "fghfg",
         "i": "1",
-        "user": 1,
-        "createdAt": "2015-11-01T14:00:00.354Z",
-        "updatedAt": "2015-11-01T14:00:00.354Z",
-        "id": 5
+        "user": 19,
+        "createdAt": "2015-11-05T10:47:05.681Z",
+        "updatedAt": "2015-11-05T10:47:05.681Z",
+        "id": 6
       }
     ],
     "user": [
@@ -212,6 +212,15 @@
         "createdAt": "2015-11-01T13:48:28.330Z",
         "updatedAt": "2015-11-01T13:48:28.330Z",
         "id": 18
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "$2a$10$QyrVX5Tm4yh/j8OJlJ4IPOCwkMm8wcKnKAy8lc49xRTJe1HnDo9Hm",
+        "createdAt": "2015-11-05T10:46:27.984Z",
+        "updatedAt": "2015-11-05T10:46:27.984Z",
+        "id": 19
       }
     ]
   },
@@ -281,10 +290,10 @@
   },
   "counters": {
     "error": {
-      "id": 5
+      "id": 6
     },
     "user": {
-      "id": 18
+      "id": 19
     }
   }
 }
