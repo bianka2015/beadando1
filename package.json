@@ -10,5 +10,22 @@
   },
   "dependencies": {
     "express": "2.4.6"
-  }
+  },
+  "name": "beadando",
+  "description": "## 1. Követelményanalízis",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bianka2015/beadando1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bianka2015/beadando1/issues"
+  },
+  "homepage": "https://github.com/bianka2015/beadando1#readme"
 }
