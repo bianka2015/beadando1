@@ -9,7 +9,7 @@
     "zombie": "^4.1.0"
   },
   "dependencies": {
-    "express": "2.4.6"
+    "express": "^2.4.6"
   },
   "name": "beadando",
   "description": "## 1. Követelményanalízis",
