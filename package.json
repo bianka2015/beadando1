@@ -9,6 +9,7 @@
     "zombie": "^4.1.0"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^2.4.6"
   },
   "name": "beadando",
